@@ -5,9 +5,11 @@ const HomePage = () => {
   return (
     <>
       <div className="h-screen">
-        Home
+
+        <p className="text-center text-xl"> Add a tasks to todo list</p>
         <div>
-          <Link href="/add-tasks">go to addTasks</Link>
+          
+
         </div>
       </div>
     </>
