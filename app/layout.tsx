@@ -1,6 +1,8 @@
+import Footer from '@/components/footer/Footer'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Navbar from '@/components/navbar/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +18,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        {/* <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> */}
+      </head>
+      <body className={inter.className}>
+        <header>
+          <Navbar/>
+        </header>
+        <main>
+          {children}
+        </main>
+          <footer>
+            <Footer/>
+          </footer>
+      </body>
     </html>
   )
 }

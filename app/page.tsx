@@ -1,9 +1,18 @@
+import Link from 'next/link'
 import React from 'react'
 
-const Home = () => {
+import HomePage from '../pages/homePage/HomePage'
+
+
+const page = () => {
   return (
-    <div>Home</div>
+    <>
+      <HomePage/>
+      {/* add taks */}
+      
+    </>
+    
   )
 }
 
-export default Home
+export default page;
