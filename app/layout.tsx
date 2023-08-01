@@ -1,3 +1,4 @@
+
 import Footer from '@/components/footer/Footer'
 import './globals.css'
 import type { Metadata } from 'next'
@@ -5,7 +6,11 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/components/navbar/Navbar'
 import  { Toaster } from 'react-hot-toast';
 
+
+
 const inter = Inter({ subsets: ['latin'] })
+
+
 
 export const metadata: Metadata = {
   title: 'Todo',
@@ -18,9 +23,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+   
     <html lang="en">
       <head>
-        {/* <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> */}
+        
       </head>
       <body className={inter.className}>
         <header>
@@ -35,5 +41,6 @@ export default function RootLayout({
           <Toaster />
       </body>
     </html>
+    
   )
 }

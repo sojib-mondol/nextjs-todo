@@ -3,8 +3,18 @@ import React from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import DataFetchAndShow from "../dataFetchAndShow/DataFetchAndShow";
+import useSWR from 'swr';
+
+
 
 const AddTodo = () => {
+
+  //for getting data
+  const getApiUrl ='http://localhost:5000/todo';
+
+  
+
   const {
     register,
     handleSubmit,
@@ -17,7 +27,7 @@ const AddTodo = () => {
       const formData = {
         todoName: data?.todoName,
       };
-      console.log(formData);
+      //console.log(formData);
       fetch("http://localhost:5000/todo", {
         method: "POST",
         headers: {
@@ -28,6 +38,7 @@ const AddTodo = () => {
         .then((res) => res.json())
         .then((data) => {
           toast.success("Successfully added.");
+         
         })
         .catch((err) => console.log(err));
     } catch (error) {
@@ -55,6 +66,10 @@ const AddTodo = () => {
           Add
         </button>
       </form>
+
+      {/* Data Feathc and show */}
+      <DataFetchAndShow apiUrl={getApiUrl} />
+
     </div>
   );
 };
