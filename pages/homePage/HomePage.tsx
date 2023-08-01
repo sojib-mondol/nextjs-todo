@@ -5,7 +5,7 @@ import React from "react";
 const HomePage = () => {
   return (
     <>
-      <div className="h-screen">
+      <div className="min-h-screen">
         <p className="text-center text-xl"> Add a tasks to todo list</p>
         <div className="flex justify-center mt-10">
           <AddTodo/>
